@@ -1,0 +1,235 @@
+/* Reset some basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fafafa; /* Light grey background */
+}
+
+/* Container for layout */
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* Header and Navigation */
+header {
+    background: #3498db; /* Modern Blue */
+    color: #fff;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav h1 {
+    margin-left: 20px;
+    font-size: 2.2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(135deg, #ff9a8b, #ff6a88); /* Gradient from light pink to soft red */
+    padding: 80px 20px;
+    color: #fff;
+    text-align: center;
+    border-bottom: 5px solid #fff; /* White border for separation */
+}
+
+#hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+#hero p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* About Section */
+#about {
+    padding: 60px 20px;
+    text-align: center;
+    background: #fff; /* Clean white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about h2 {
+    color: #3498db; /* Modern Blue */
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+/* Projects Section */
+#projects {
+    background: #f7f7f7; /* Very light grey */
+    padding: 60px 20px;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.project-item {
+    background: #fff; /* White background for cards */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 15px;
+    padding: 25px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.project-item:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.project-item h3 {
+    color: #e74c3c; /* Warm Red */
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 20px;
+    background: #fff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #fafafa; /* Light grey background for form */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 8px;
+    background: #fff;
+}
+
+form button {
+    padding: 12px 24px;
+    background: #3498db; /* Modern Blue */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background: #2980b9; /* Darker Modern Blue */
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background: #3498db; /* Modern Blue */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 12px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #e74c3c; /* Warm Red */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .project-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-item {
+        width: 90%;
+    }
+}
